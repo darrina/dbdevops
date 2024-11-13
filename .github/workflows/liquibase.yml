@@ -10,10 +10,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
+    # - name: Set up JDK 11
+    #   uses: actions/setup-java@v2
+    #   with:
+    #     java-version: '11'
 
     - name: Run Liquibase Update
       uses: liquibase/liquibase-github-action@v7
