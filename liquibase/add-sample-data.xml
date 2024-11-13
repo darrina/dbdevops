@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="darrin2@sluggoworks.com">
+        <sql>
+            SET IDENTITY_INSERT example_table ON;
+            INSERT INTO example_table (ID, NAME) VALUES (1, 'Sample Name 1'), (2, 'Sample Name 2');
+        </sql>
+        <rollback>
+            <sql> DELETE FROM example_table WHERE ID IN (1, 2); </sql>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
