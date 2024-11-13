@@ -14,5 +14,10 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <rollback>
+            <delete tableName="example_table">
+                <where>ID IN (13, 14)</where>
+            </delete>
+        </rollback>
     </changeSet>
 </databaseChangeLog>
